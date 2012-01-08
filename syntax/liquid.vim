@@ -51,7 +51,7 @@ syn match liquidRubyInstanceVariable "@\l\w*" contained
 " Output:
 
 syn region liquidTags matchgroup=liquidDelim start='{%' keepend end='%}' contains=liquidRubyInstanceVariable,liquidKeyword,liquidSpecial,liquidString,liquidPipe,liquidNumber,liquidEqual,liquidNotEqual,liquidLess,liquidMore,liquidLessOrEqual,liquidMoreOrEqual 
-syn region liquidOutput matchgroup=liquidDelim start='{{' end='}}' 
+syn region liquidOutput matchgroup=liquidDelim start='{{' end='}}' contains=liquidPipe,liquidSpecial
 
 " Comments:
 syn region liquidComment start="{%\s\+comment\s\+%}" end="{%\s\+endcomment\s\+%}"
